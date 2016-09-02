@@ -1,0 +1,37 @@
+# =============== #
+# Unity generated #
+# =============== #
+
+/FistsOfDarwinGame/Library
+/FistsOfDarwinGame/Temp
+/FistsOfDarwinGame/game_Data
+/FistsOfDarwinGame/Assets/UnityVS
+/FistsOfDarwinGame/Assets/UnityVS.meta
+/FistsOfDarwinGame/*.exe
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+obj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+*.exe 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+FistsOfDarwinGame/debug.txt
