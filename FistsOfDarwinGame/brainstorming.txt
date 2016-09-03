@@ -2,9 +2,11 @@ Ideas:
 
 Tree of life
 	see: https://en.wikipedia.org/wiki/Fossils_of_the_Burgess_Shale
+	10 forms
+		tree based on https://en.wikipedia.org/wiki/Fossils_of_the_Burgess_Shale#See_also
 ~ 5 minute playthrough
 deterministic ending
-
+"millions of years" counter to count play time
 
 Ending:
 dust storm 
