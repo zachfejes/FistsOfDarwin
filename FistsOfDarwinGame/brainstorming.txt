@@ -24,3 +24,20 @@ Things to decide:
 	Top-down? full 3D?
 		-resolution: contanst forward, control up/down/left/right
 
+
+The different species in the game will encompass creatures from the shale, and also some assumed lead-up evolutions to those. 10 different potential lifeforms overall.
+https://en.wikipedia.org/wiki/Aysheaia
+https://en.wikipedia.org/wiki/Hallucigenia
+https://en.wikipedia.org/wiki/Opabinia
+https://en.wikipedia.org/wiki/Anomalocaris
+https://en.wikipedia.org/wiki/Trilobite
+These are the primary 5 from the Burgess Shale deposit. The leadup evolutions would be:
+1. Amoeba
+2. Multicellular organism
+3. Between Lobopods and Anomalocarid
+4. Between Anomalocarid and Anomalocaris
+5. Between Anomalocaris and Arthropods
+
+Should also make algae-like model and kelp/seaweed like models. Also bubbles, rocks, etc.
+
+Zach will have to make a model/animation for each of these (probably a 'not-moving' animation and a 'moving' animation
