@@ -7,8 +7,20 @@ Tree of life
 ~ 5 minute playthrough
 deterministic ending
 "millions of years" counter to count play time
+soft cut two switch b/w stages
+	ie something passes in front of you for a moment before the level-up
+	hide the evolution and skip timer ahead some amount to show time passing
+
+
 
 Ending:
 dust storm 
 	fade out
 	fade into fossil display showing your playthrough
+	show both modelled fossil and real one?
+		include where to find it in gallery?
+
+Things to decide:
+	Top-down? full 3D?
+		-resolution: contanst forward, control up/down/left/right
+
