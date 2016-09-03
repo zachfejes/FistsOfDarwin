@@ -41,3 +41,5 @@ These are the primary 5 from the Burgess Shale deposit. The leadup evolutions wo
 Should also make algae-like model and kelp/seaweed like models. Also bubbles, rocks, etc.
 
 Zach will have to make a model/animation for each of these (probably a 'not-moving' animation and a 'moving' animation
+
+Some good graphs re: life ratios at http://burgess-shale.rom.on.ca/en/science/burgess-shale/03-fossils.php
