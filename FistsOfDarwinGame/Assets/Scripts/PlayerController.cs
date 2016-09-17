@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour {
 			Screen.orientation = ScreenOrientation.Portrait;
 		}
 		guiSpeedElement.position = new Vector3(0, normalizeSpeed, 0);
+
 	}
 
 	// Update is called once per frame
