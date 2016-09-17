@@ -8,11 +8,11 @@ public class PlayerController : MonoBehaviour {
     float maxTilt       = 50.0f;
 
     float sensitivity   = 10.0f;
-    float forwardForce  = 1.0f;
+    float forwardForce  = 1.2f;
 
-    Transform guiSpeedElement = null;
+    public Transform guiSpeedElement;
 
-	public float maxSpeed			= 1.0f;
+	public float maxSpeed			= 5.0f;
 
 	public float velocity			= 0.0f;
     private float normalizeSpeed    = 2.0f;
@@ -30,25 +30,36 @@ public class PlayerController : MonoBehaviour {
         }
         guiSpeedElement.position = new Vector3(0, normalizeSpeed, 0);
 
-	}                                                                                                                                                                                                                                                                                                                                                                                                                    
-	
-	//// Update is called once per frame
-	//void Update () {
-	//    foreach (Touch evt in Input.touches) {
- //           if (evt.phase == TouchPhase.Moved) {
- //               normalizeSpeed = evt.position.y / Screen.height;
- //               guiSpeedElement.position = new Vector3 (0, normalizeSpeed, 0);
- //           }
- //       }
-	//}
+	}
 
-    void FixedUpdate() {
+	// Update is called once per frame
+	void Update()
+	{
+		foreach (Touch evt in Input.touches)
+		{
+			if (evt.phase == TouchPhase.Moved)
+			{
+				normalizeSpeed = evt.position.y / Screen.height;
+				guiSpeedElement.position = new Vector3(0, normalizeSpeed, 0);
+			}
+		}
+	}
+
+	void FixedUpdate() {
 
 		velocity = Vector3.Magnitude(GetComponent<Rigidbody>().velocity);
 
-		if (velocity < maxSpeed) {
+		// Sets max speed
+		if (velocity <= maxSpeed) {
 			GetComponent<Rigidbody>().AddForce(0, 0, normalizeSpeed * forwardForce);
 		}
+
+		// Steering accelerations
+		var directionalInput = new Vector3(
+			Input.acceleration.x,
+			Input.acceleration.z,
+			Input.acceleration.y
+		) * velocity;
 
 		Vector3 accelerator = Input.acceleration;        
 
@@ -57,7 +68,7 @@ public class PlayerController : MonoBehaviour {
         force.x = Mathf.Lerp(force.x, (accelerator.y + 0.6f - 0.6f) * maxTilt, 0.2f);
 
 		// Rotates the Camera
-        //Quaternion rot = Quaternion.Euler(force);
-        //transform.rotation = Quaternion.Lerp(transform.rotation, rot, sensitivity);
+        Quaternion rot = Quaternion.Euler(force);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rot, sensitivity);
     }
 } 
