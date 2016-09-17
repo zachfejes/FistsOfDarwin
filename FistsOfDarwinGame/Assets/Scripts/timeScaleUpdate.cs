@@ -5,17 +5,9 @@ using UnityEngine.Events;
 
 public class timeScaleUpdate : MonoBehaviour
 {
-    public enum timePeriodEnum :int {
-        intro,
-        cambrianStage2,
-        cambrianStage3,
-        cambrianStage4,
-        cambrianStage5,
-        collapse,
-        showcase
-    };
-    public timePeriodEnum playerEra; 
-    public timePeriodEnum worldEra; 
+
+    public timePeriod.timePeriodEnum playerEra; 
+    public timePeriod.timePeriodEnum worldEra; 
  
     public Image timeScale;
 	public Image timeScaleBorder;
@@ -27,8 +19,8 @@ public class timeScaleUpdate : MonoBehaviour
 
     // TIME CONSTANTS
     float MAXGAMETIME = 3*60;
-    float FADETOCOLLAPSETIME = 2;
-    float SHOWCASETIME = 5;
+    float FADETOCOLLAPSETIME = 10;
+    float SHOWCASETIME = 60;
 
 	// Time bar colours
 	Color timeScaleStartColour;
@@ -38,9 +30,9 @@ public class timeScaleUpdate : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
-        playerEra = timePeriodEnum.intro;
-        worldEra = timePeriodEnum.intro;
+		
+        playerEra = timePeriod.timePeriodEnum.intro;
+        worldEra = timePeriod.timePeriodEnum.intro;
 		gameTime = 0;
 
 		timeScaleStartColour.r = 65/255.0f;
@@ -62,7 +54,7 @@ public class timeScaleUpdate : MonoBehaviour
 	{
 		Time.timeScale = scale;
 		//subtract time if the game has started
-		if (worldEra != timePeriodEnum.intro)
+		if (worldEra != timePeriod.timePeriodEnum.intro)
             gameTime  -= Time.deltaTime;
 
 		//update the timer bar
@@ -71,29 +63,35 @@ public class timeScaleUpdate : MonoBehaviour
 			float pct = gameTime / MAXGAMETIME;
 			timeScale.fillAmount = 1 - pct;
 			timeScale.color = timeScaleStartColour + (1-pct) * timeScaleColourDelta;
-			//Debug.Log(timeScale.color.ToString());
 			int age = 505 + (int)(25 * pct);
 			timeScaleText.text = age + " Million Years Ago...";
 		}
 		else {
 			timeScale.fillAmount = 1; //done
-			worldEra = timePeriodEnum.collapse;
 		}
 
-		if (worldEra == timePeriodEnum.cambrianStage2 &&
+		// Control world age development
+		if (worldEra == timePeriod.timePeriodEnum.cambrianStage2 &&
 				gameTime / MAXGAMETIME < 0.75)
-			worldEra = timePeriodEnum.cambrianStage3;
-		if (worldEra == timePeriodEnum.cambrianStage3 &&
+			worldEra = timePeriod.timePeriodEnum.cambrianStage3;
+		if (worldEra == timePeriod.timePeriodEnum.cambrianStage3 &&
 				gameTime / MAXGAMETIME < 0.5)
-			worldEra = timePeriodEnum.cambrianStage4;
-		if (worldEra == timePeriodEnum.cambrianStage4 &&
+			worldEra = timePeriod.timePeriodEnum.cambrianStage4;
+		if (worldEra == timePeriod.timePeriodEnum.cambrianStage4 &&
 				gameTime / MAXGAMETIME < 0.25)
-			worldEra = timePeriodEnum.cambrianStage5;
+			worldEra = timePeriod.timePeriodEnum.cambrianStage5;
+		if (worldEra == timePeriod.timePeriodEnum.cambrianStage5 &&
+				gameTime < 0)
+			worldEra = timePeriod.timePeriodEnum.collapse;
+		if (worldEra == timePeriod.timePeriodEnum.collapse &&
+				gameTime < -FADETOCOLLAPSETIME)
+			worldEra = timePeriod.timePeriodEnum.showcase;
+		if (worldEra == timePeriod.timePeriodEnum.showcase &&
+				gameTime < -(FADETOCOLLAPSETIME + SHOWCASETIME))
+			worldEra = timePeriod.timePeriodEnum.intro;
 
-		//enable/disable the time bar based on the world era'
-		if (worldEra == timePeriodEnum.intro ||
-				worldEra == timePeriodEnum.collapse ||
-				worldEra == timePeriodEnum.showcase)
+		//enable/disable the time bar based on the world era
+		if (!gameIsActive())
 		{
 			timeScale.enabled = false;
 			timeScaleText.enabled = false;
@@ -106,30 +104,28 @@ public class timeScaleUpdate : MonoBehaviour
 			timeScaleBorder.enabled = true;
 		}
 
-		//set timebar colour
-/*		switch(worldEra)
-		{
-			case timePeriodEnum.cambrianStage2:
-				timeScale.color = Color.yellow;
-				break;
-			case timePeriodEnum.cambrianStage3:
-				timeScale.color = Color.red;
-				break;
-			case timePeriodEnum.cambrianStage4:
-				timeScale.color = Color.green;
-				break;
-			case timePeriodEnum.cambrianStage5:
-				timeScale.color = Color.cyan;
-				break;
-		}*/
 
-    }
+		//control start button visiblity
+		startButton.enabled = (worldEra == timePeriod.timePeriodEnum.intro);
+		startButton.targetGraphic.enabled = (worldEra == timePeriod.timePeriodEnum.intro);
+		startButton.transform.FindChild("Text").gameObject.GetComponent<Text>().text = (worldEra == timePeriod.timePeriodEnum.intro) ? "Start!" : "";
+
+	}
 	
 	public void StartGame() {
 		gameTime = MAXGAMETIME;
-		worldEra = timePeriodEnum.cambrianStage2;
-		playerEra = timePeriodEnum.cambrianStage2;
+		worldEra = timePeriod.timePeriodEnum.cambrianStage2;
+		playerEra = timePeriod.timePeriodEnum.cambrianStage2;
 	}
-	
 
+	//Check if the game is active
+	public bool gameIsActive()
+	{
+		if (worldEra == timePeriod.timePeriodEnum.intro ||
+				worldEra == timePeriod.timePeriodEnum.collapse ||
+				worldEra == timePeriod.timePeriodEnum.showcase)
+			return false;
+		else
+			return true;
+	}
 }
