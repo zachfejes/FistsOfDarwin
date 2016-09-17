@@ -35,3 +35,7 @@ obj/
 ehthumbs.db
 Thumbs.db
 FistsOfDarwinGame/debug.txt
+# ============ #
+# User Defined #
+# ============ #
+*.xcf*
