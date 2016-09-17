@@ -10,9 +10,9 @@ public class PlayerController : MonoBehaviour {
     float sensitivity   = 10.0f;
     float forwardForce  = 1.0f;
 
-    Transform guiSpeedElement;
+    Transform guiSpeedElement = null;
 
-    private float normalizeSpeed    = 0.2f;
+    private float normalizeSpeed    = 0.5f;
     private Vector3 force           = Vector3.zero;
 
     bool horizontalOrientation      = true;
@@ -39,11 +39,11 @@ public class PlayerController : MonoBehaviour {
 	}
 
     void FixedUpdate() {
-        normalizeSpeed = 1.0f;
+        normalizeSpeed = 2.0f;
 
-        GetComponent<Rigidbody>().AddRelativeForce(0, 0, normalizeSpeed * forwardForce);
+        GetComponent<Rigidbody>().AddForce(0, 0, normalizeSpeed * forwardForce);
 
-        Vector3 accelerator = Input.acceleration;        
+		Vector3 accelerator = Input.acceleration;        
 
         force.y += accelerator.x * turnSpeed;
         force.z = Mathf.Lerp(force.z, -accelerator.x * maxTurnLean, 0.2f);
