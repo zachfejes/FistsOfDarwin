@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class creatureGeneration : MonoBehaviour {
 
@@ -7,6 +8,8 @@ public class creatureGeneration : MonoBehaviour {
 	public float TIMEBETWEENSPAWNS = 5.0f;
 
 	float timeSinceLastSpawn;
+
+	public UnityEvent createCreatureEvent;
 
 	public enum creatureListEnum 
 	{
@@ -42,8 +45,13 @@ public class creatureGeneration : MonoBehaviour {
 			if (timeSinceLastSpawn < 0)
 			{
 				timeSinceLastSpawn = TIMEBETWEENSPAWNS;
-				Debug.Log("Spawn a dude!");
+				createCreatureEvent.Invoke();
 			}
 		}
+	}
+
+	public void createCreature()
+	{
+		Debug.Log("Spawn a dude!");
 	}
 }

@@ -15,6 +15,8 @@ public class timeScaleUpdate : MonoBehaviour
     public Button startButton;
 	public int scale = 1;
 
+	public UnityEvent startCollapseEvent;
+
 	float gameTime;
 
     // TIME CONSTANTS
@@ -81,8 +83,10 @@ public class timeScaleUpdate : MonoBehaviour
 				gameTime / MAXGAMETIME < 0.25)
 			worldEra = timePeriod.timePeriodEnum.cambrianStage5;
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage5 &&
-				gameTime < 0)
+				gameTime < 0) {
 			worldEra = timePeriod.timePeriodEnum.collapse;
+			startCollapseEvent.Invoke();
+		}
 		if (worldEra == timePeriod.timePeriodEnum.collapse &&
 				gameTime < -FADETOCOLLAPSETIME)
 			worldEra = timePeriod.timePeriodEnum.showcase;
