@@ -12,7 +12,9 @@ public class PlayerController : MonoBehaviour {
 
     Transform guiSpeedElement = null;
 
-	public float velocity			= 0;
+	public float maxSpeed			= 1.0f;
+
+	public float velocity			= 0.0f;
     private float normalizeSpeed    = 2.0f;
     private Vector3 force           = Vector3.zero;
 
@@ -41,14 +43,11 @@ public class PlayerController : MonoBehaviour {
 	//}
 
     void FixedUpdate() {
-		velocity = normalizeSpeed * forwardForce;
 
-		if ( velocity >= 2.0f) {
-			GetComponent<Rigidbody>().AddForce(0, 0, velocity);
-		}
-		else
-		{
-			GetComponent<Rigidbody>().AddForce(0, 0, 0);
+		velocity = Vector3.Magnitude(GetComponent<Rigidbody>().velocity);
+
+		if (velocity < maxSpeed) {
+			GetComponent<Rigidbody>().AddForce(0, 0, normalizeSpeed * forwardForce);
 		}
 
 		Vector3 accelerator = Input.acceleration;        
