@@ -24,6 +24,7 @@ public class Creature: MonoBehaviour {
 		creatures.Add("Anomalocaris", new creatureFeatures { size = 15, maxSpeed = 5, sightRange = 10 });
 		creatures.Add("Trilobite", new creatureFeatures { size = 15, maxSpeed = 5, sightRange = 10 });
 		creatures.Add("Midstage1", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
+		creatures.Add("Midstage2", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
 		creatures.Add("Midstage3", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
 		creatures.Add("Plankton1", new creatureFeatures { size = 1, maxSpeed = 0, sightRange = 0 });
 		creatures.Add("Plankton2", new creatureFeatures { size = 1, maxSpeed = 0, sightRange = 0 });
