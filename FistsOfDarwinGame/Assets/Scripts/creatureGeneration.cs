@@ -23,7 +23,12 @@ public class creatureGeneration : MonoBehaviour {
 		Midstage1,
 		Midstage2,
 		Midstage3,
-		Plankton
+		Plankton1,
+		Plankton2,
+		Plankton3,
+		Plankton4,
+		Plankton5,
+		Plankton6
 	};
 
 	public createCreatureEventClass createCreatureEvent;
@@ -66,25 +71,59 @@ public class creatureGeneration : MonoBehaviour {
 		creatureListEnum spawnCreatureType;
 		System.Random randGen = new System.Random();
 		double randD = randGen.NextDouble();
+		double planktonOdds;
 
 		switch (worldEra) {
 			case timePeriod.timePeriodEnum.cambrianStage2:
-				if (randD < .9)
-					spawnCreatureType = creatureListEnum.Plankton;
+				planktonOdds = 0.9;
+				if (randD < planktonOdds/6)
+					spawnCreatureType = creatureListEnum.Plankton1;
+				else if (randD < planktonOdds * 2 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton2;
+				else if (randD < planktonOdds * 3 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton3;
+				else if (randD < planktonOdds * 4 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton4;
+				else if (randD < planktonOdds * 5 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton5;
+				else if (randD < planktonOdds)
+					spawnCreatureType = creatureListEnum.Plankton6;
 				else
 					spawnCreatureType = creatureListEnum.Amoeba;
 				break;
 			case timePeriod.timePeriodEnum.cambrianStage2x:
-				if (randD < .7)
-					spawnCreatureType = creatureListEnum.Plankton;
+				planktonOdds = 0.7;
+				if (randD < planktonOdds / 6)
+					spawnCreatureType = creatureListEnum.Plankton1;
+				else if (randD < planktonOdds * 2 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton2;
+				else if (randD < planktonOdds * 3 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton3;
+				else if (randD < planktonOdds * 4 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton4;
+				else if (randD < planktonOdds * 5 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton5;
+				else if (randD < planktonOdds)
+					spawnCreatureType = creatureListEnum.Plankton6;
 				else if (randD < .9)
 					spawnCreatureType = creatureListEnum.Amoeba;
 				else
 					spawnCreatureType = creatureListEnum.Worm;
 				break;
 			case timePeriod.timePeriodEnum.cambrianStage3:
-				if (randD < .6)
-					spawnCreatureType = creatureListEnum.Plankton;
+				planktonOdds = 0.6;
+				if (randD < planktonOdds / 6)
+					spawnCreatureType = creatureListEnum.Plankton1;
+				else if (randD < planktonOdds * 2 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton2;
+				else if (randD < planktonOdds * 3 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton3;
+				else if (randD < planktonOdds * 4 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton4;
+				else if (randD < planktonOdds * 5 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton5;
+				else if (randD < planktonOdds)
+					spawnCreatureType = creatureListEnum.Plankton6;
 				else if (randD < .8)
 					spawnCreatureType = creatureListEnum.Worm;
 				else if (randD < .9)
@@ -93,8 +132,19 @@ public class creatureGeneration : MonoBehaviour {
 					spawnCreatureType = creatureListEnum.Midstage1;
 				break;
 			case timePeriod.timePeriodEnum.cambrianStage3x:
-				if (randD < .5)
-					spawnCreatureType = creatureListEnum.Plankton;
+				planktonOdds = 0.5;
+				if (randD < planktonOdds / 6)
+					spawnCreatureType = creatureListEnum.Plankton1;
+				else if (randD < planktonOdds * 2 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton2;
+				else if (randD < planktonOdds * 3 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton3;
+				else if (randD < planktonOdds * 4 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton4;
+				else if (randD < planktonOdds * 5 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton5;
+				else if (randD < planktonOdds)
+					spawnCreatureType = creatureListEnum.Plankton6;
 				else if (randD < .65)
 					spawnCreatureType = creatureListEnum.Aysheaia;
 				else if (randD < .8)
@@ -105,8 +155,19 @@ public class creatureGeneration : MonoBehaviour {
 					spawnCreatureType = creatureListEnum.Midstage2;
 				break;
 			case timePeriod.timePeriodEnum.cambrianStage4:
-				if (randD < .5)
-					spawnCreatureType = creatureListEnum.Plankton;
+				planktonOdds = 0.5;
+				if (randD < planktonOdds / 6)
+					spawnCreatureType = creatureListEnum.Plankton1;
+				else if (randD < planktonOdds * 2 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton2;
+				else if (randD < planktonOdds * 3 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton3;
+				else if (randD < planktonOdds * 4 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton4;
+				else if (randD < planktonOdds * 5 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton5;
+				else if (randD < planktonOdds)
+					spawnCreatureType = creatureListEnum.Plankton6;
 				else if (randD < .65)
 					spawnCreatureType = creatureListEnum.Hallucigenia;
 				else if (randD < .8)
@@ -117,8 +178,19 @@ public class creatureGeneration : MonoBehaviour {
 					spawnCreatureType = creatureListEnum.Midstage3;
 				break;
 			case timePeriod.timePeriodEnum.cambrianStage5:
-				if (randD < .5)
-					spawnCreatureType = creatureListEnum.Plankton;
+				planktonOdds = 0.5;
+				if (randD < planktonOdds / 6)
+					spawnCreatureType = creatureListEnum.Plankton1;
+				else if (randD < planktonOdds * 2 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton2;
+				else if (randD < planktonOdds * 3 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton3;
+				else if (randD < planktonOdds * 4 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton4;
+				else if (randD < planktonOdds * 5 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton5;
+				else if (randD < planktonOdds)
+					spawnCreatureType = creatureListEnum.Plankton6;
 				else if (randD < .65)
 					spawnCreatureType = creatureListEnum.Opabinia;
 				else if (randD < .8)
@@ -129,7 +201,19 @@ public class creatureGeneration : MonoBehaviour {
 					spawnCreatureType = creatureListEnum.Trilobite;
 				break;
 			default:
-				spawnCreatureType = creatureListEnum.Plankton;
+				planktonOdds = 1;
+				if (randD < planktonOdds / 6)
+					spawnCreatureType = creatureListEnum.Plankton1;
+				else if (randD < planktonOdds * 2 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton2;
+				else if (randD < planktonOdds * 3 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton3;
+				else if (randD < planktonOdds * 4 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton4;
+				else if (randD < planktonOdds * 5 / 6.0)
+					spawnCreatureType = creatureListEnum.Plankton5;
+				else
+					spawnCreatureType = creatureListEnum.Plankton6;
 				break;
 		}
 
@@ -172,7 +256,17 @@ public class creatureGeneration : MonoBehaviour {
 				return "Midstage2";
 			case creatureListEnum.Midstage3:
 				return "Midstage3";
-			case creatureListEnum.Plankton:
+			case creatureListEnum.Plankton1:
+				return "Plankton";
+			case creatureListEnum.Plankton2:
+				return "Plankton";
+			case creatureListEnum.Plankton3:
+				return "Plankton";
+			case creatureListEnum.Plankton4:
+				return "Plankton";
+			case creatureListEnum.Plankton5:
+				return "Plankton";
+			case creatureListEnum.Plankton6:
 				return "Plankton";
 			default: return "";
 
