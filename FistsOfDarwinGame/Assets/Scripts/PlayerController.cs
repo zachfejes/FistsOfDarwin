@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
 		else {
 			Screen.orientation = ScreenOrientation.Portrait;
 		}
-		guiSpeedElement.position = new Vector3(0, normalizeSpeed, 0);
+		//guiSpeedElement.position = new Vector3(0, normalizeSpeed, 0);
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
 		Screen.sleepTimeout = 0;
 		gameObject.GetComponent<Rigidbody>().angularDrag = 0.25f;
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
 		foreach (Touch evt in Input.touches) {
 			if (evt.phase == TouchPhase.Moved) {
 				normalizeSpeed = evt.position.y / Screen.height;
-				guiSpeedElement.position = new Vector3(0, normalizeSpeed, 0);
+				//guiSpeedElement.position = new Vector3(0, normalizeSpeed, 0);
 			}
 		}
 	}
@@ -55,11 +55,11 @@ public class PlayerController : MonoBehaviour {
 		velocity = Vector3.Magnitude(GetComponent<Rigidbody>().velocity);
 
 		// Steering accelerations
-		var directionalInput = new Vector3(
-			Input.acceleration.x,
-			Input.acceleration.z,
-			Input.acceleration.y
-		) * velocity;
+		//var directionalInput = new Vector3(
+		//	Input.acceleration.x,
+		//	Input.acceleration.z,
+		//	Input.acceleration.y
+		//) * velocity;
 
 		// Rotates the Player
 		force.y += accelerator.x * turnSpeed;

@@ -48,6 +48,6 @@ public class CameraController : MonoBehaviour {
 		transform.LookAt(target);
 		
 		// Set the Camera height
-		currentHeight = transform.position.y;
+		//currentHeight = transform.position.y;
 	}
 }
