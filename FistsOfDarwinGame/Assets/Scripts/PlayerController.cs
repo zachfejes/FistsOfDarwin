@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour {
 	public float maxSpeed			= 5.0f;
 
 	public float velocity			= 0.0f;
-	public float movement			= 0.0f;
     private float normalizeSpeed    = 2.0f;
     private Vector3 force           = Vector3.zero;
 
@@ -78,4 +77,8 @@ public class PlayerController : MonoBehaviour {
         Quaternion rot = Quaternion.Euler(force);
         transform.rotation = Quaternion.Lerp(transform.rotation, rot, sensitivity);
     }
-} 
+
+	void OnCollision() {
+
+	}
+}

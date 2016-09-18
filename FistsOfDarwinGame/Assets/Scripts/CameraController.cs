@@ -41,12 +41,13 @@ public class CameraController : MonoBehaviour {
 		// Seting the position of the camera on the x-z planes to the
 		// distance behind the target
 		transform.position = target.position;
-		transform.position -= currentRotation * Vector3.forward * distance;
 
-		// Set the Camera height
-		currentHeight = transform.position.y;
+		transform.position -= currentRotation * Vector3.forward * distance;
 
 		// Look at the Target
 		transform.LookAt(target);
+		
+		// Set the Camera height
+		currentHeight = transform.position.y;
 	}
 }
