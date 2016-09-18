@@ -239,7 +239,7 @@ public class creatureGeneration : MonoBehaviour {
 			createCreature(10);
 	}
 
-	public string getCreatureTypeString(creatureListEnum type) {
+	static public string getCreatureTypeString(creatureListEnum type) {
 		switch (type) {
 			case creatureListEnum.Anomalocaris:
 				return "Anomalocaris";
@@ -277,4 +277,5 @@ public class creatureGeneration : MonoBehaviour {
 
 		}
 	}
+
 }
