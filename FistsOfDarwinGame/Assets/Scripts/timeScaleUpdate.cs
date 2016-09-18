@@ -24,6 +24,7 @@ public class timeScaleUpdate : MonoBehaviour
     float MAXGAMETIME = 3*60;
     float FADETOCOLLAPSETIME = 30;
     float SHOWCASETIME = 40;
+	int NUMGAMESTAGES = 3;
 
 	// Time bar colours
 	Color timeScaleStartColour;
@@ -75,11 +76,12 @@ public class timeScaleUpdate : MonoBehaviour
 
 		// Control world age development
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage2 &&
-				gameTime / MAXGAMETIME < 5 / 6.0) {
-			worldEra = timePeriod.timePeriodEnum.cambrianStage2x;
+				gameTime / MAXGAMETIME < (NUMGAMESTAGES-1) / (float)NUMGAMESTAGES) {
+//			worldEra = timePeriod.timePeriodEnum.cambrianStage2x;
+			worldEra = timePeriod.timePeriodEnum.cambrianStage4;
 			eraChanged.Invoke();
 		}
-		if (worldEra == timePeriod.timePeriodEnum.cambrianStage2x &&
+/*		if (worldEra == timePeriod.timePeriodEnum.cambrianStage2x &&
 				gameTime / MAXGAMETIME < 4 / 6.0) {
 			worldEra = timePeriod.timePeriodEnum.cambrianStage3;
 			eraChanged.Invoke();
@@ -93,9 +95,9 @@ public class timeScaleUpdate : MonoBehaviour
 				gameTime / MAXGAMETIME < 2/6.0){
 			worldEra = timePeriod.timePeriodEnum.cambrianStage4;
 			eraChanged.Invoke();
-		}
+		}*/
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage4 &&
-				gameTime / MAXGAMETIME < 1/6.0){
+				gameTime / MAXGAMETIME < (NUMGAMESTAGES - 2) / (float)NUMGAMESTAGES) {
 			worldEra = timePeriod.timePeriodEnum.cambrianStage5;
 			eraChanged.Invoke();
 		}

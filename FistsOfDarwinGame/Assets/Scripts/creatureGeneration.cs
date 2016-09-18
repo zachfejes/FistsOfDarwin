@@ -262,17 +262,17 @@ public class creatureGeneration : MonoBehaviour {
 			case creatureListEnum.Midstage3:
 				return "Midstage3";
 			case creatureListEnum.Plankton1:
-				return "Plankton";
+				return "Plankton1";
 			case creatureListEnum.Plankton2:
-				return "Plankton";
+				return "Plankton2";
 			case creatureListEnum.Plankton3:
-				return "Plankton";
+				return "Plankton3";
 			case creatureListEnum.Plankton4:
-				return "Plankton";
+				return "Plankton4";
 			case creatureListEnum.Plankton5:
-				return "Plankton";
+				return "Plankton5";
 			case creatureListEnum.Plankton6:
-				return "Plankton";
+				return "Plankton6";
 			default: return "";
 
 		}
