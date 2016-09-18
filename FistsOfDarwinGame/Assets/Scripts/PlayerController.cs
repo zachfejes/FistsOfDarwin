@@ -24,21 +24,24 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start()
 	{
-		if (horizontalOrientation)
-		{
+		if (horizontalOrientation) {
 			Screen.orientation = ScreenOrientation.LandscapeLeft;
 
 		}
-		else
-		{
+		else {
 			Screen.orientation = ScreenOrientation.Portrait;
 		}
 		guiSpeedElement.position = new Vector3(0, normalizeSpeed, 0);
-
+		Screen.sleepTimeout = SleepTimeout.NeverSleep;
+		Screen.sleepTimeout = 0;
 	}
 
 	// Update is called once per frame
 	void Update() {
+		// Extra-Large Steeped Tea
+		// So the freaking screen stops going to sleep, the asshole
+		Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
 		foreach (Touch evt in Input.touches)
 		{
 			if (evt.phase == TouchPhase.Moved)
