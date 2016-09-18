@@ -13,7 +13,7 @@ public class NPCController : MonoBehaviour {
     public float wanderRadius;
     public float wanderTimer;
 
-    public float loseInterestTimer;
+    public float loseInterestTimer = 60.0f;
 
     private Transform target;
     private NavMeshAgent agent;
@@ -35,7 +35,7 @@ public class NPCController : MonoBehaviour {
 
         if(hostCreature.hasPrey()) {
             if(timer < loseInterestTimer) {
-                agent.SetDestination(hostCreature.getPrey().transform.position);
+                agent.SetDestination(pursue(hostCreature.getPrey()));
                 gameObject.transform.LookAt(hostCreature.getPrey().transform.position);
             } else {
                 hostCreature.setPrey(null);
@@ -61,5 +61,20 @@ public class NPCController : MonoBehaviour {
 
         return navHit.position;
     }
+
+    public Vector3 pursue(GameObject p) {
+        Vector3 distance = p.transform.position - transform.position;
+        float T = distance.magnitude / hostCreature.getMaxSpeed();
+        Vector3 futurePos = p.transform.position + p.GetComponent<NavMeshAgent>().velocity * T;
+        return futurePos;
+    }
+
+    // TODO: Evade predator if it is close
+    // public Vector3 evade(GameObject pred) {
+    //     Vector3 distance = pred.transform.position - transform.position;
+    //     float updatesAhead = distance.magnitude / hostCreature.getMaxSpeed();
+    //     Vector3 futurePosition = pred.transform.position + pred.velocity * updatesAhead;
+    //     return futurePos;
+    // }
 
 }
