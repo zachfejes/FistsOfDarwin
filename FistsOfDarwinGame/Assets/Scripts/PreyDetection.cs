@@ -18,8 +18,9 @@ public class PreyDetection : MonoBehaviour {
         // get the forward vector of the player's camera
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
-        Vector3 pl = transform.position + hostCreature.center;
-        if (Physics.SphereCast(p1, hostCreature.getSightRange(), transform.forward, out hit, hostCreature.getSightRange())) {
+        Vector3 origin = transform.position;// + hostCreature.center;
+
+        if (Physics.SphereCast(origin, hostCreature.getSightRange(), transform.forward, out hit, hostCreature.getSightRange())) {
             if(hostCreature.CanEat(hit.collider.gameObject)) {
                 hostCreature.setPrey(hit.collider.gameObject);
             }
