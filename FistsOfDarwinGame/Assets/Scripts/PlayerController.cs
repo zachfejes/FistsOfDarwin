@@ -42,10 +42,8 @@ public class PlayerController : MonoBehaviour {
 		// So the freaking screen stops going to sleep, the asshole
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
-		foreach (Touch evt in Input.touches)
-		{
-			if (evt.phase == TouchPhase.Moved)
-			{
+		foreach (Touch evt in Input.touches) {
+			if (evt.phase == TouchPhase.Moved) {
 				normalizeSpeed = evt.position.y / Screen.height;
 				guiSpeedElement.position = new Vector3(0, normalizeSpeed, 0);
 			}
