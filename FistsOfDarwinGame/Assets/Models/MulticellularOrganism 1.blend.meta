@@ -1,0 +1,272 @@
+fileFormatVersion: 2
+guid: efc4f38278ca48b41ab8798ae3bc9e0f
+timeCreated: 1474155834
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armature
+    100002: CenterBone
+    100004: HeadBone1
+    100006: HeadBone2
+    100008: HeadBone3
+    100010: HeadBone4
+    100012: HeadBone5
+    100014: HeadBone6
+    100016: HeadBone7
+    100018: HeadBone8
+    100020: //RootNode
+    100022: TailBone1
+    100024: TailBone10
+    100026: TailBone11
+    100028: TailBone12
+    100030: TailBone13
+    100032: TailBone2
+    100034: TailBone3
+    100036: TailBone4
+    100038: TailBone5
+    100040: TailBone6
+    100042: TailBone7
+    100044: TailBone8
+    100046: TailBone9
+    400000: Armature
+    400002: CenterBone
+    400004: HeadBone1
+    400006: HeadBone2
+    400008: HeadBone3
+    400010: HeadBone4
+    400012: HeadBone5
+    400014: HeadBone6
+    400016: HeadBone7
+    400018: HeadBone8
+    400020: //RootNode
+    400022: TailBone1
+    400024: TailBone10
+    400026: TailBone11
+    400028: TailBone12
+    400030: TailBone13
+    400032: TailBone2
+    400034: TailBone3
+    400036: TailBone4
+    400038: TailBone5
+    400040: TailBone6
+    400042: TailBone7
+    400044: TailBone8
+    400046: TailBone9
+    4300000: Cylinder
+    7400000: Default Take
+    7400002: ArmatureAction_001
+    9500000: //RootNode
+    13700000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/CenterBone
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1/HeadBone2
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1/HeadBone2/HeadBone3
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1/HeadBone2/HeadBone3/HeadBone4
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1/HeadBone2/HeadBone3/HeadBone4/HeadBone5
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1/HeadBone2/HeadBone3/HeadBone4/HeadBone5/HeadBone6
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1/HeadBone2/HeadBone3/HeadBone4/HeadBone5/HeadBone6/HeadBone7
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1/HeadBone2/HeadBone3/HeadBone4/HeadBone5/HeadBone6/HeadBone7/HeadBone8
+        weight: 1
+      - path: Armature/TailBone1
+        weight: 1
+      - path: Armature/TailBone1/TailBone2
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6/TailBone7
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6/TailBone7/TailBone8
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6/TailBone7/TailBone8/TailBone9
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6/TailBone7/TailBone8/TailBone9/TailBone10
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6/TailBone7/TailBone8/TailBone9/TailBone10/TailBone11
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6/TailBone7/TailBone8/TailBone9/TailBone10/TailBone11/TailBone12
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6/TailBone7/TailBone8/TailBone9/TailBone10/TailBone11/TailBone12/TailBone13
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ArmatureAction_001
+      takeName: ArmatureAction_001
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/CenterBone
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1/HeadBone2
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1/HeadBone2/HeadBone3
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1/HeadBone2/HeadBone3/HeadBone4
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1/HeadBone2/HeadBone3/HeadBone4/HeadBone5
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1/HeadBone2/HeadBone3/HeadBone4/HeadBone5/HeadBone6
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1/HeadBone2/HeadBone3/HeadBone4/HeadBone5/HeadBone6/HeadBone7
+        weight: 1
+      - path: Armature/CenterBone/HeadBone1/HeadBone2/HeadBone3/HeadBone4/HeadBone5/HeadBone6/HeadBone7/HeadBone8
+        weight: 1
+      - path: Armature/TailBone1
+        weight: 1
+      - path: Armature/TailBone1/TailBone2
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6/TailBone7
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6/TailBone7/TailBone8
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6/TailBone7/TailBone8/TailBone9
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6/TailBone7/TailBone8/TailBone9/TailBone10
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6/TailBone7/TailBone8/TailBone9/TailBone10/TailBone11
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6/TailBone7/TailBone8/TailBone9/TailBone10/TailBone11/TailBone12
+        weight: 1
+      - path: Armature/TailBone1/TailBone2/TailBone3/TailBone4/TailBone5/TailBone6/TailBone7/TailBone8/TailBone9/TailBone10/TailBone11/TailBone12/TailBone13
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
