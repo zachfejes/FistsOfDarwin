@@ -2,14 +2,14 @@
 using System.Collections;
 using UnityEngine.Events;
 
+public class createCreatureEventClass : UnityEvent<creatureGeneration.creatureListEnum> { };
+
 public class creatureGeneration : MonoBehaviour {
 
 	public timeScaleUpdate worldState;
 	public float TIMEBETWEENSPAWNS = 1.0f;
 
 	float timeSinceLastSpawn;
-
-	public UnityEvent createCreatureEvent;
 
 	public enum creatureListEnum 
 	{
@@ -25,6 +25,8 @@ public class creatureGeneration : MonoBehaviour {
 		Midstage3,
 		Plankton
 	};
+
+	public createCreatureEventClass createCreatureEvent;
 
 	timePeriod.timePeriodEnum worldEra;
 
@@ -47,7 +49,7 @@ public class creatureGeneration : MonoBehaviour {
 			if (timeSinceLastSpawn < 0)
 			{
 				timeSinceLastSpawn = TIMEBETWEENSPAWNS;
-				createCreatureEvent.Invoke();
+				createCreature();
 			}
 		}
 	}
@@ -132,6 +134,7 @@ public class creatureGeneration : MonoBehaviour {
 		}
 
 		Debug.Log("Spawn a dude! (" + getCreatureTypeString(spawnCreatureType) +")");
+		createCreatureEvent.Invoke(spawnCreatureType);
 		//Add Actor to mesh?
 	}
 
