@@ -19,21 +19,21 @@ public class Creature: MonoBehaviour {
 	static private Dictionary<string, creatureFeatures> creatures;
 	void Start() {
 		creatures = new Dictionary<string, creatureFeatures>();
-		creatures.Add("Anomalocaris", new creatureFeatures { size = 1, maxSpeed =1, sightRange = 1 }) ;
-		creatures.Add("Aysheaia", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
-		creatures.Add("Hallucigenia", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
-		creatures.Add("Opabinia", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
-		creatures.Add("Trilobite", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
-		creatures.Add("Amoeba", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
-		creatures.Add("Worm", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
+		creatures.Add("Amoeba", new creatureFeatures { size = 2, maxSpeed = 1, sightRange = 1 });
+		creatures.Add("Worm", new creatureFeatures { size = 4, maxSpeed = 1.5f, sightRange = 2 });
+		creatures.Add("Aysheaia", new creatureFeatures { size = 8, maxSpeed = 2, sightRange = 3 });
+		creatures.Add("Hallucigenia", new creatureFeatures { size = 10, maxSpeed = 3, sightRange = 5 });
+		creatures.Add("Opabinia", new creatureFeatures { size = 12, maxSpeed = 4, sightRange = 7 });
+		creatures.Add("Anomalocaris", new creatureFeatures { size = 15, maxSpeed = 5, sightRange = 10 });
+		creatures.Add("Trilobite", new creatureFeatures { size = 15, maxSpeed = 5, sightRange = 10 });
 		creatures.Add("Midstage1", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
 		creatures.Add("Midstage3", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
-		creatures.Add("Plankton1", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
-		creatures.Add("Plankton2", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
-		creatures.Add("Plankton3", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
-		creatures.Add("Plankton4", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
-		creatures.Add("Plankton5", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
-		creatures.Add("Plankton6", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
+		creatures.Add("Plankton1", new creatureFeatures { size = 1, maxSpeed = 0, sightRange = 0 });
+		creatures.Add("Plankton2", new creatureFeatures { size = 1, maxSpeed = 0, sightRange = 0 });
+		creatures.Add("Plankton3", new creatureFeatures { size = 1, maxSpeed = 0, sightRange = 0 });
+		creatures.Add("Plankton4", new creatureFeatures { size = 1, maxSpeed = 0, sightRange = 0 });
+		creatures.Add("Plankton5", new creatureFeatures { size = 1, maxSpeed = 0, sightRange = 0 });
+		creatures.Add("Plankton6", new creatureFeatures { size = 1, maxSpeed = 0, sightRange = 0 });
 
 	}
 	public void create(string cType) {

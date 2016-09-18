@@ -31,7 +31,7 @@ public class creatureGeneration : MonoBehaviour {
 		Plankton6
 	};
 
-	public createCreatureEventClass createCreatureEvent;
+	public createCreatureEventClass createCreatureEvent = new createCreatureEventClass();
 
 	timePeriod.timePeriodEnum worldEra;
 
@@ -40,7 +40,7 @@ public class creatureGeneration : MonoBehaviour {
 		worldEra = worldState.worldEra;
 		timeSinceLastSpawn = TIMEBETWEENSPAWNS;
 		worldState.eraChanged.AddListener(createCreatureEraChange);
-		createCreatureEvent = new createCreatureEventClass();
+		//createCreatureEvent = new createCreatureEventClass();
 		createCreatureEvent.AddListener(createCreatureEventDebug);
 	}
 	

@@ -4,25 +4,27 @@ using System.Collections.Generic;
 
 public class creatureManager : MonoBehaviour {
 
-	GameObject anomalocarisPrefab;
-	GameObject aysheaiaPrefab;
-	GameObject hallucigeniaPrefab;
-	GameObject opabeniaPrefab;
-	GameObject trilobitePrefab;
-	GameObject amoebaPrefab;
-	GameObject wormPrefab;
-	GameObject plankton1Prefab;
-	GameObject plankton2Prefab;
-	GameObject plankton3Prefab;
-	GameObject plankton4Prefab;
-	GameObject plankton5Prefab;
-	GameObject plankton6Prefab;
+	public GameObject anomalocarisPrefab;
+	public GameObject aysheaiaPrefab;
+	public GameObject hallucigeniaPrefab;
+	public GameObject opabeniaPrefab;
+	public GameObject trilobitePrefab;
+	public GameObject amoebaPrefab;
+	public GameObject wormPrefab;
+	public GameObject plankton1Prefab;
+	public GameObject plankton2Prefab;
+	public GameObject plankton3Prefab;
+	public GameObject plankton4Prefab;
+	public GameObject plankton5Prefab;
+	public GameObject plankton6Prefab;
 
 	public List<GameObject> activeCreatureList;
 
+	public creatureGeneration creatureGenControl;
+
 	// Use this for initialization
 	void Start () {
-		
+		creatureGenControl.createCreatureEvent.AddListener(addCreature);
 	}
 	
 	// Update is called once per frame
@@ -30,7 +32,7 @@ public class creatureManager : MonoBehaviour {
 	
 	}
 
-	GameObject addCreature(creatureGeneration.creatureListEnum creatureType) {
+	void addCreature(creatureGeneration.creatureListEnum creatureType) {
 		GameObject newCreature;// = new GameObject(creatureGeneration.getCreatureTypeString(creatureType));
 		switch (creatureType) {
 			case creatureGeneration.creatureListEnum.Anomalocaris:
@@ -85,8 +87,11 @@ public class creatureManager : MonoBehaviour {
 				newCreature = Instantiate(plankton4Prefab);
 				break;
 		}
+		//newCreature.AddComponent<NavMeshAgent>();
+		newCreature.AddComponent<Creature>();
+		newCreature.AddComponent<PreyDetection>();
 		activeCreatureList.Add(newCreature);
-		return newCreature;
+		//return newCreature;
 	}
 
 	void removeAllCreatures() {
