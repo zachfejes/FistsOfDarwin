@@ -34,11 +34,15 @@ public class PlayerController : MonoBehaviour {
 			Screen.orientation = ScreenOrientation.Portrait;
 		}
 		guiSpeedElement.position = new Vector3(0, normalizeSpeed, 0);
-
+		Screen.sleepTimeout = SleepTimeout.NeverSleep;
+		Screen.sleepTimeout = 0;
 	}
 
 	// Update is called once per frame
 	void Update() {
+		// Extra-Large Steeped Tea
+		Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
 		foreach (Touch evt in Input.touches)
 		{
 			if (evt.phase == TouchPhase.Moved)
