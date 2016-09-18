@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class creatureGeneration : MonoBehaviour {
 
 	public timeScaleUpdate worldState;
-	public float TIMEBETWEENSPAWNS = 5.0f;
+	public float TIMEBETWEENSPAWNS = 1.0f;
 
 	float timeSinceLastSpawn;
 
@@ -27,10 +27,12 @@ public class creatureGeneration : MonoBehaviour {
 	};
 
 	timePeriod.timePeriodEnum worldEra;
+
 	// Use this for initialization
 	void Start () {
 		worldEra = worldState.worldEra;
 		timeSinceLastSpawn = TIMEBETWEENSPAWNS;
+		worldState.eraChanged.AddListener(createCreatureEraChange);
 	}
 	
 	// Update is called once per frame
@@ -131,6 +133,18 @@ public class creatureGeneration : MonoBehaviour {
 
 		Debug.Log("Spawn a dude! (" + getCreatureTypeString(spawnCreatureType) +")");
 		//Add Actor to mesh?
+	}
+
+	public void createCreature(int n) {
+		for (int i=0; i< n; i++) {
+			createCreature();
+		}
+	}
+
+	public void createCreatureEraChange() {
+		Debug.Log("Populating after era change!");
+		if (worldState.gameIsActive())
+			createCreature(10);
 	}
 
 	public string getCreatureTypeString(creatureListEnum type) {

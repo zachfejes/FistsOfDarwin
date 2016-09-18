@@ -16,6 +16,7 @@ public class timeScaleUpdate : MonoBehaviour
 	public int scale = 1;
 
 	public UnityEvent startCollapseEvent;
+	public UnityEvent eraChanged;
 
 	float gameTime;
 
@@ -47,7 +48,7 @@ public class timeScaleUpdate : MonoBehaviour
 		timeScaleEndColour.b = 21/255f;
 		timeScaleEndColour.a = 1;
 
-		timeScaleColourDelta =timeScaleEndColour - timeScaleStartColour;
+		timeScaleColourDelta = timeScaleEndColour - timeScaleStartColour;
 
 	}
 
@@ -74,31 +75,46 @@ public class timeScaleUpdate : MonoBehaviour
 
 		// Control world age development
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage2 &&
-				gameTime / MAXGAMETIME < 5/6.0)
+				gameTime / MAXGAMETIME < 5 / 6.0) {
 			worldEra = timePeriod.timePeriodEnum.cambrianStage2x;
+			eraChanged.Invoke();
+		}
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage2x &&
-				gameTime / MAXGAMETIME < 4 / 6.0)
+				gameTime / MAXGAMETIME < 4 / 6.0) {
 			worldEra = timePeriod.timePeriodEnum.cambrianStage3;
+			eraChanged.Invoke();
+		}
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage3 &&
-				gameTime / MAXGAMETIME < 0.5)
+				gameTime / MAXGAMETIME < 0.5){
 			worldEra = timePeriod.timePeriodEnum.cambrianStage3x;
+			eraChanged.Invoke();
+		}
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage3x &&
-				gameTime / MAXGAMETIME < 2/6.0)
+				gameTime / MAXGAMETIME < 2/6.0){
 			worldEra = timePeriod.timePeriodEnum.cambrianStage4;
+			eraChanged.Invoke();
+		}
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage4 &&
-				gameTime / MAXGAMETIME < 1/6.0)
+				gameTime / MAXGAMETIME < 1/6.0){
 			worldEra = timePeriod.timePeriodEnum.cambrianStage5;
+			eraChanged.Invoke();
+		}
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage5 &&
 				gameTime < 0) {
 			worldEra = timePeriod.timePeriodEnum.collapse;
 			startCollapseEvent.Invoke();
+			eraChanged.Invoke();
 		}
 		if (worldEra == timePeriod.timePeriodEnum.collapse &&
-				gameTime < -FADETOCOLLAPSETIME)
+				gameTime < -FADETOCOLLAPSETIME){
 			worldEra = timePeriod.timePeriodEnum.showcase;
+			eraChanged.Invoke();
+		}
 		if (worldEra == timePeriod.timePeriodEnum.showcase &&
-				gameTime < -(FADETOCOLLAPSETIME + SHOWCASETIME))
+				gameTime < -(FADETOCOLLAPSETIME + SHOWCASETIME)){
 			worldEra = timePeriod.timePeriodEnum.intro;
+			eraChanged.Invoke();
+		}
 
 		//enable/disable the time bar based on the world era
 		if (!gameIsActive())
@@ -126,6 +142,7 @@ public class timeScaleUpdate : MonoBehaviour
 		gameTime = MAXGAMETIME;
 		worldEra = timePeriod.timePeriodEnum.cambrianStage2;
 		playerEra = timePeriod.timePeriodEnum.cambrianStage2;
+		eraChanged.Invoke();
 	}
 
 	//Check if the game is active
