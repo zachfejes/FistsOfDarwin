@@ -1,0 +1,506 @@
+fileFormatVersion: 2
+guid: b7d293051f27fb34194eeed1e47f126b
+timeCreated: 1474225774
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Claw1
+    100004: Claw2
+    100006: Core
+    100008: Cylinder_001
+    100010: Head
+    100012: Neck1
+    100014: Neck2
+    100016: Nose1
+    100018: Nose2
+    100020: Nose3
+    100022: Nose4
+    100024: Nose5
+    100026: Nose6
+    100028: //RootNode
+    100030: Tail1
+    100032: Tail10
+    100034: Tail11
+    100036: Tail12
+    100038: Tail2
+    100040: Tail3
+    100042: Tail4
+    100044: Tail5
+    100046: Tail6
+    100048: Tail7
+    100050: Tail8
+    100052: Tail9
+    100054: TailFin1_L
+    100056: TailFin1_R
+    100058: TailFin2_L
+    100060: TailFin2_R
+    100062: TailFin3_L
+    100064: TailFin3_R
+    100066: Wing10_L
+    100068: Wing10_R
+    100070: Wing11_L
+    100072: Wing11_R
+    100074: Wing12_L
+    100076: Wing12_R
+    100078: Wing13_L
+    100080: Wing13_R
+    100082: Wing14_L
+    100084: Wing14_R
+    100086: Wing15_L
+    100088: Wing15_R
+    100090: Wing1_L
+    100092: Wing1_R
+    100094: Wing2_L
+    100096: Wing2_R
+    100098: Wing3_L
+    100100: Wing3_R
+    100102: Wing4_L
+    100104: Wing4_R
+    100106: Wing5_L
+    100108: Wing5_R
+    100110: Wing6_L
+    100112: Wing6_R
+    100114: Wing7_L
+    100116: Wing7_R
+    100118: Wing8_L
+    100120: Wing8_R
+    100122: Wing9_L
+    100124: Wing9_R
+    400000: Armature
+    400002: Claw1
+    400004: Claw2
+    400006: Core
+    400008: Cylinder_001
+    400010: Head
+    400012: Neck1
+    400014: Neck2
+    400016: Nose1
+    400018: Nose2
+    400020: Nose3
+    400022: Nose4
+    400024: Nose5
+    400026: Nose6
+    400028: //RootNode
+    400030: Tail1
+    400032: Tail10
+    400034: Tail11
+    400036: Tail12
+    400038: Tail2
+    400040: Tail3
+    400042: Tail4
+    400044: Tail5
+    400046: Tail6
+    400048: Tail7
+    400050: Tail8
+    400052: Tail9
+    400054: TailFin1_L
+    400056: TailFin1_R
+    400058: TailFin2_L
+    400060: TailFin2_R
+    400062: TailFin3_L
+    400064: TailFin3_R
+    400066: Wing10_L
+    400068: Wing10_R
+    400070: Wing11_L
+    400072: Wing11_R
+    400074: Wing12_L
+    400076: Wing12_R
+    400078: Wing13_L
+    400080: Wing13_R
+    400082: Wing14_L
+    400084: Wing14_R
+    400086: Wing15_L
+    400088: Wing15_R
+    400090: Wing1_L
+    400092: Wing1_R
+    400094: Wing2_L
+    400096: Wing2_R
+    400098: Wing3_L
+    400100: Wing3_R
+    400102: Wing4_L
+    400104: Wing4_R
+    400106: Wing5_L
+    400108: Wing5_R
+    400110: Wing6_L
+    400112: Wing6_R
+    400114: Wing7_L
+    400116: Wing7_R
+    400118: Wing8_L
+    400120: Wing8_R
+    400122: Wing9_L
+    400124: Wing9_R
+    4300000: Cylinder_001
+    7400000: Default Take
+    7400002: ArmatureAction
+    9500000: //RootNode
+    13700000: Cylinder_001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 139
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Core
+        weight: 1
+      - path: Armature/Core/Neck1
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1/Nose2
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1/Nose2/Nose3
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1/Nose2/Nose3/Nose4
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1/Nose2/Nose3/Nose4/Nose5
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1/Nose2/Nose3/Nose4/Nose5/Nose6
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1/Nose2/Nose3/Nose4/Nose5/Nose6/Claw1
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1/Nose2/Nose3/Nose4/Nose5/Nose6/Claw2
+        weight: 1
+      - path: Armature/Tail1
+        weight: 1
+      - path: Armature/Tail1/Tail2
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7/Tail8
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7/Tail8/Tail9
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7/Tail8/Tail9/Tail10
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7/Tail8/Tail9/Tail10/Tail11
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7/Tail8/Tail9/Tail10/Tail11/Tail12
+        weight: 1
+      - path: Armature/Wing1_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L/Wing12_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L/Wing12_L/Wing13_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L/Wing12_L/Wing13_L/Wing14_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L/Wing12_L/Wing13_L/Wing14_L/TailFin1_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L/Wing12_L/Wing13_L/Wing14_L/TailFin1_L/TailFin2_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L/Wing12_L/Wing13_L/Wing14_L/TailFin1_L/TailFin2_L/TailFin3_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L/Wing12_L/Wing13_L/Wing14_L/Wing15_L
+        weight: 1
+      - path: Armature/Wing1_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R/Wing12_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R/Wing12_R/Wing13_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R/Wing12_R/Wing13_R/Wing14_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R/Wing12_R/Wing13_R/Wing14_R/TailFin1_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R/Wing12_R/Wing13_R/Wing14_R/TailFin1_R/TailFin2_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R/Wing12_R/Wing13_R/Wing14_R/TailFin1_R/TailFin2_R/TailFin3_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R/Wing12_R/Wing13_R/Wing14_R/Wing15_R
+        weight: 1
+      - path: Cylinder_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ArmatureAction
+      takeName: ArmatureAction
+      firstFrame: 0
+      lastFrame: 139
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Core
+        weight: 1
+      - path: Armature/Core/Neck1
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1/Nose2
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1/Nose2/Nose3
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1/Nose2/Nose3/Nose4
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1/Nose2/Nose3/Nose4/Nose5
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1/Nose2/Nose3/Nose4/Nose5/Nose6
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1/Nose2/Nose3/Nose4/Nose5/Nose6/Claw1
+        weight: 1
+      - path: Armature/Core/Neck1/Neck2/Head/Nose1/Nose2/Nose3/Nose4/Nose5/Nose6/Claw2
+        weight: 1
+      - path: Armature/Tail1
+        weight: 1
+      - path: Armature/Tail1/Tail2
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7/Tail8
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7/Tail8/Tail9
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7/Tail8/Tail9/Tail10
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7/Tail8/Tail9/Tail10/Tail11
+        weight: 1
+      - path: Armature/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7/Tail8/Tail9/Tail10/Tail11/Tail12
+        weight: 1
+      - path: Armature/Wing1_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L/Wing12_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L/Wing12_L/Wing13_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L/Wing12_L/Wing13_L/Wing14_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L/Wing12_L/Wing13_L/Wing14_L/TailFin1_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L/Wing12_L/Wing13_L/Wing14_L/TailFin1_L/TailFin2_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L/Wing12_L/Wing13_L/Wing14_L/TailFin1_L/TailFin2_L/TailFin3_L
+        weight: 1
+      - path: Armature/Wing1_L/Wing2_L/Wing3_L/Wing4_L/Wing5_L/Wing6_L/Wing7_L/Wing8_L/Wing9_L/Wing10_L/Wing11_L/Wing12_L/Wing13_L/Wing14_L/Wing15_L
+        weight: 1
+      - path: Armature/Wing1_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R/Wing12_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R/Wing12_R/Wing13_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R/Wing12_R/Wing13_R/Wing14_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R/Wing12_R/Wing13_R/Wing14_R/TailFin1_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R/Wing12_R/Wing13_R/Wing14_R/TailFin1_R/TailFin2_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R/Wing12_R/Wing13_R/Wing14_R/TailFin1_R/TailFin2_R/TailFin3_R
+        weight: 1
+      - path: Armature/Wing1_R/Wing2_R/Wing3_R/Wing4_R/Wing5_R/Wing6_R/Wing7_R/Wing8_R/Wing9_R/Wing10_R/Wing11_R/Wing12_R/Wing13_R/Wing14_R/Wing15_R
+        weight: 1
+      - path: Cylinder_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
