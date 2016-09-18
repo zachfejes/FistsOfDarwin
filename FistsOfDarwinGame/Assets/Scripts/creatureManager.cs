@@ -34,7 +34,6 @@ public class creatureManager : MonoBehaviour {
 
 	void addCreature(creatureGeneration.creatureListEnum creatureType) {
 		GameObject newCreature;// = new GameObject(creatureGeneration.getCreatureTypeString(creatureType));
-		Vector3 spawn = new Vector3(90, 3, 90);
 		switch (creatureType) {
 			case creatureGeneration.creatureListEnum.Anomalocaris:
 				newCreature = Instantiate(anomalocarisPrefab);
@@ -88,6 +87,9 @@ public class creatureManager : MonoBehaviour {
 				newCreature = Instantiate(plankton4Prefab);
 				break;
 		}
+		System.Random randGen = new System.Random();
+		double randD = randGen.NextDouble();
+		Vector3 spawn = new Vector3((float)randGen.NextDouble()*300+100, (float)randGen.NextDouble()*60+20, (float)randGen.NextDouble() * 300 + 100);
 		newCreature.transform.position = spawn;
 		//newCreature.AddComponent<NavMeshAgent>();
 		newCreature.AddComponent<Creature>();
