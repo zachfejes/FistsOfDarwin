@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour {
 		// Rotates the Player
 		force.y += accelerator.x * turnSpeed;
         force.z = Mathf.Lerp(force.z, -accelerator.x * maxTurnLean, 0.2f);
-        force.x = Mathf.Lerp(force.x, (accelerator.y + 0.6f - 0.6f) * maxTilt, 0.2f);
+        force.x = Mathf.Lerp(force.x, (accelerator.y + 0.6f) * maxTilt * 2, 0.2f);
 
 		// Sets max speed
 		if (velocity <= maxSpeed) {
