@@ -21,8 +21,8 @@ public class timeScaleUpdate : MonoBehaviour
 
     // TIME CONSTANTS
     float MAXGAMETIME = 3*60;
-    float FADETOCOLLAPSETIME = 10;
-    float SHOWCASETIME = 60;
+    float FADETOCOLLAPSETIME = 30;
+    float SHOWCASETIME = 40;
 
 	// Time bar colours
 	Color timeScaleStartColour;
@@ -74,13 +74,19 @@ public class timeScaleUpdate : MonoBehaviour
 
 		// Control world age development
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage2 &&
-				gameTime / MAXGAMETIME < 0.75)
+				gameTime / MAXGAMETIME < 5/6)
+			worldEra = timePeriod.timePeriodEnum.cambrianStage2x;
+		if (worldEra == timePeriod.timePeriodEnum.cambrianStage2x &&
+				gameTime / MAXGAMETIME < 4 / 6)
 			worldEra = timePeriod.timePeriodEnum.cambrianStage3;
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage3 &&
 				gameTime / MAXGAMETIME < 0.5)
+			worldEra = timePeriod.timePeriodEnum.cambrianStage3x;
+		if (worldEra == timePeriod.timePeriodEnum.cambrianStage3x &&
+				gameTime / MAXGAMETIME < 2/6)
 			worldEra = timePeriod.timePeriodEnum.cambrianStage4;
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage4 &&
-				gameTime / MAXGAMETIME < 0.25)
+				gameTime / MAXGAMETIME < 1/6)
 			worldEra = timePeriod.timePeriodEnum.cambrianStage5;
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage5 &&
 				gameTime < 0) {
@@ -125,11 +131,6 @@ public class timeScaleUpdate : MonoBehaviour
 	//Check if the game is active
 	public bool gameIsActive()
 	{
-		if (worldEra == timePeriod.timePeriodEnum.intro ||
-				worldEra == timePeriod.timePeriodEnum.collapse ||
-				worldEra == timePeriod.timePeriodEnum.showcase)
-			return false;
-		else
-			return true;
+		return timePeriod.isWorldActive(worldEra);
 	}
 }
