@@ -40,6 +40,8 @@ public class creatureGeneration : MonoBehaviour {
 		worldEra = worldState.worldEra;
 		timeSinceLastSpawn = TIMEBETWEENSPAWNS;
 		worldState.eraChanged.AddListener(createCreatureEraChange);
+		createCreatureEvent = new createCreatureEventClass();
+		createCreatureEvent.AddListener(createCreatureEventDebug);
 	}
 	
 	// Update is called once per frame
@@ -217,9 +219,12 @@ public class creatureGeneration : MonoBehaviour {
 				break;
 		}
 
-		Debug.Log("Spawn a dude! (" + getCreatureTypeString(spawnCreatureType) +")");
 		createCreatureEvent.Invoke(spawnCreatureType);
 		//Add Actor to mesh?
+	}
+
+	void createCreatureEventDebug(creatureListEnum type) {
+		Debug.Log("Spawn a dude! (" + getCreatureTypeString(type) + ")");
 	}
 
 	public void createCreature(int n) {
