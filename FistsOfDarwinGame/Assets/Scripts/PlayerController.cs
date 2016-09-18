@@ -3,11 +3,11 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-    float turnSpeed     = 5.0f;
-    float maxTurnLean	= 50.0f;
+    float turnSpeed     = 3.0f;
+    float maxTurnLean	= 40.0f;
     float maxTilt       = 50.0f;
 
-    float sensitivity   = 10.0f;
+    float sensitivity   = 5.0f;
     float forwardForce  = 3.2f;
 
     public Transform guiSpeedElement;
@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour {
 		guiSpeedElement.position = new Vector3(0, normalizeSpeed, 0);
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
 		Screen.sleepTimeout = 0;
+		gameObject.GetComponent<Rigidbody>().angularDrag = 0.25f;
 	}
 
 	// Update is called once per frame
@@ -71,10 +72,9 @@ public class PlayerController : MonoBehaviour {
 		// Sets max speed
 		if (velocity <= maxSpeed) {
 			GetComponent<Rigidbody>().AddForce(transform.forward * forwardForce);
-
 		}
 
-		// Rotates the Camera
+		// Applies the rotation
         Quaternion rot = Quaternion.Euler(force);
         transform.rotation = Quaternion.Lerp(transform.rotation, rot, sensitivity);
     }
