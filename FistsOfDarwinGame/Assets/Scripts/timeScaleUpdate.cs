@@ -74,19 +74,19 @@ public class timeScaleUpdate : MonoBehaviour
 
 		// Control world age development
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage2 &&
-				gameTime / MAXGAMETIME < 5/6)
+				gameTime / MAXGAMETIME < 5/6.0)
 			worldEra = timePeriod.timePeriodEnum.cambrianStage2x;
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage2x &&
-				gameTime / MAXGAMETIME < 4 / 6)
+				gameTime / MAXGAMETIME < 4 / 6.0)
 			worldEra = timePeriod.timePeriodEnum.cambrianStage3;
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage3 &&
 				gameTime / MAXGAMETIME < 0.5)
 			worldEra = timePeriod.timePeriodEnum.cambrianStage3x;
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage3x &&
-				gameTime / MAXGAMETIME < 2/6)
+				gameTime / MAXGAMETIME < 2/6.0)
 			worldEra = timePeriod.timePeriodEnum.cambrianStage4;
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage4 &&
-				gameTime / MAXGAMETIME < 1/6)
+				gameTime / MAXGAMETIME < 1/6.0)
 			worldEra = timePeriod.timePeriodEnum.cambrianStage5;
 		if (worldEra == timePeriod.timePeriodEnum.cambrianStage5 &&
 				gameTime < 0) {

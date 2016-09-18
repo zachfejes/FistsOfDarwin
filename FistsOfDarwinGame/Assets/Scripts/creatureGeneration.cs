@@ -58,8 +58,6 @@ public class creatureGeneration : MonoBehaviour {
 //															  \-- Trilobite
 	public void createCreature()
 	{
-		Debug.Log("Spawn a dude!");
-
 		//pick a creature type
 		creatureListEnum spawnCreatureType;
 		System.Random randGen = new System.Random();
@@ -126,12 +124,16 @@ public class creatureGeneration : MonoBehaviour {
 				else
 					spawnCreatureType = creatureListEnum.Trilobite;
 				break;
+			default:
+				spawnCreatureType = creatureListEnum.Plankton;
+				break;
 		}
 
+		Debug.Log("Spawn a dude! (" + getCreatureTypeString(spawnCreatureType) +")");
 		//Add Actor to mesh?
 	}
 
-	string getCreatureTypeString(creatureListEnum type) {
+	public string getCreatureTypeString(creatureListEnum type) {
 		switch (type) {
 			case creatureListEnum.Anomalocaris:
 				return "Anomalocaris";
