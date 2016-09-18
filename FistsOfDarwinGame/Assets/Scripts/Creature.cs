@@ -3,13 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Creature: MonoBehaviour {
-    private Vector3 force;
+    private Vector3 velocity;
     private GameObject prey;
     private string creatureType;
-    private float speed;
-    private float size;
-    private float sightRange;
-
 
 	struct creatureFeatures {
 		public float size;
@@ -17,6 +13,7 @@ public class Creature: MonoBehaviour {
 		public float sightRange;
 	}
 	static private Dictionary<string, creatureFeatures> creatures;
+
 	void Start() {
 		creatures = new Dictionary<string, creatureFeatures>();
 		creatures.Add("Amoeba", new creatureFeatures { size = 2, maxSpeed = 1, sightRange = 1 });
@@ -27,6 +24,7 @@ public class Creature: MonoBehaviour {
 		creatures.Add("Anomalocaris", new creatureFeatures { size = 15, maxSpeed = 5, sightRange = 10 });
 		creatures.Add("Trilobite", new creatureFeatures { size = 15, maxSpeed = 5, sightRange = 10 });
 		creatures.Add("Midstage1", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
+		creatures.Add("Midstage2", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
 		creatures.Add("Midstage3", new creatureFeatures { size = 1, maxSpeed = 1, sightRange = 1 });
 		creatures.Add("Plankton1", new creatureFeatures { size = 1, maxSpeed = 0, sightRange = 0 });
 		creatures.Add("Plankton2", new creatureFeatures { size = 1, maxSpeed = 0, sightRange = 0 });
@@ -34,33 +32,27 @@ public class Creature: MonoBehaviour {
 		creatures.Add("Plankton4", new creatureFeatures { size = 1, maxSpeed = 0, sightRange = 0 });
 		creatures.Add("Plankton5", new creatureFeatures { size = 1, maxSpeed = 0, sightRange = 0 });
 		creatures.Add("Plankton6", new creatureFeatures { size = 1, maxSpeed = 0, sightRange = 0 });
-
 	}
+
 	public void create(string cType) {
         creatureType = cType;
-        size = creatures[cType].size;
     }
 
-    public Vector3 getDirectionHeading() { return force; }
+    public Vector3 getDirectionHeading() { return velocity; }
 
-    public void setDirectionHeading(Vector3 newHeading) { force = newHeading; }
+    public void setDirectionHeading(Vector3 newHeading) { velocity = newHeading; }
+
+    public bool hasPrey() { if(prey) { return true; } else { return false; } }
 
     public GameObject getPrey() { return prey; }
 
     public void setPrey(GameObject newPrey) { prey = newPrey; }
 
-    public float getSightRange() { return sightRange; }
+    public float getMaxSpeed() { return creatures[creatureType].maxSpeed; }
 
-    public float getSize() { return size; }
+    public float getSightRange() { return creatures[creatureType].sightRange; }
 
-    public void setSize(float s) { size = s; }
+    public float getSize() { return creatures[creatureType].size; }
 
-    public float getSpeed() { return speed; }
-
-    public void setSpeed(float sp) { speed = sp; }
-
-    public bool hasPrey() { if(prey) { return true; } else { return false; } }
-
-    public bool CanEat(GameObject potentialPrey) { return potentialPrey.GetComponent<Creature>().getSize() < size; }
-
+    public bool CanEat(GameObject potentialPrey) { return potentialPrey.GetComponent<Creature>().getSize() < creatures[creatureType].size; }
 }

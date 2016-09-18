@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 
 public class NPCController : MonoBehaviour {
-    private GameObject prey;
     private Creature hostCreature;
     private PreyDetection preyDetect;
 
@@ -14,6 +13,8 @@ public class NPCController : MonoBehaviour {
     public float wanderRadius;
     public float wanderTimer;
 
+    public float loseInterestTimer = 60.0f;
+
     private Transform target;
     private NavMeshAgent agent;
     private float timer;
@@ -23,23 +24,29 @@ public class NPCController : MonoBehaviour {
         hostCreature = gameObject.GetComponent<Creature>();
         agent = gameObject.GetComponent<NavMeshAgent>();
         preyDetect = gameObject.GetComponent<PreyDetection>();
+
         timer = wanderTimer;
+        wanderRadius = 10.0f;
     }
 
     // Update is called once per frame
     void Update() {
         timer += Time.deltaTime;
 
-        if(timer >= wanderTimer) {
-            if(!hostCreature.hasPrey()) {
-                // TODO: follow prey
-
-                agent.SetDestination(prey.transform.position);
+        if(hostCreature.hasPrey()) {
+            if(timer < loseInterestTimer) {
+                agent.SetDestination(pursue(hostCreature.getPrey()));
+                gameObject.transform.LookAt(hostCreature.getPrey().transform.position);
+            } else {
+                hostCreature.setPrey(null);
             }
-            // Wander
-            Vector3 newPos = RandNavSphere(transform.position, wanderRadius, -1);
-            agent.SetDestination(newPos);
-            timer = 0;
+        } else {
+            if(timer >= wanderTimer) {
+                // Wander
+                Vector3 newPos = RandNavSphere(transform.position, wanderRadius, -1);
+                agent.SetDestination(newPos);
+                timer = 0;
+            }
         }
     }
 
@@ -55,5 +62,19 @@ public class NPCController : MonoBehaviour {
         return navHit.position;
     }
 
+    public Vector3 pursue(GameObject p) {
+        Vector3 distance = p.transform.position - transform.position;
+        float T = distance.magnitude / hostCreature.getMaxSpeed();
+        Vector3 futurePos = p.transform.position + p.GetComponent<NavMeshAgent>().velocity * T;
+        return futurePos;
+    }
+
+    // TODO: Evade predator if it is close
+    // public Vector3 evade(GameObject pred) {
+    //     Vector3 distance = pred.transform.position - transform.position;
+    //     float updatesAhead = distance.magnitude / hostCreature.getMaxSpeed();
+    //     Vector3 futurePosition = pred.transform.position + pred.velocity * updatesAhead;
+    //     return futurePos;
+    // }
 
 }

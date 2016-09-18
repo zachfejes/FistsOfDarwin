@@ -132,7 +132,7 @@ public class timeScaleUpdate : MonoBehaviour
 			timeScaleBorder.enabled = true;
 		}
 
-
+		playerEra = worldEra;
 		//control start button visiblity
 		startButton.enabled = (worldEra == timePeriod.timePeriodEnum.intro);
 		startButton.targetGraphic.enabled = (worldEra == timePeriod.timePeriodEnum.intro);

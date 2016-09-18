@@ -20,11 +20,20 @@ public class PreyDetection : MonoBehaviour {
 
         Vector3 origin = transform.position;// + hostCreature.center;
 
-        if (Physics.SphereCast(origin, hostCreature.getSightRange(), transform.forward, out hit, hostCreature.getSightRange())) {
+        // Detect prey forward sphere
+        if(Physics.SphereCast(origin, hostCreature.getSightRange(), transform.forward, out hit, hostCreature.getSightRange())) {
             if(hostCreature.CanEat(hit.collider.gameObject)) {
                 hostCreature.setPrey(hit.collider.gameObject);
             }
         }
+
+        // TODO: Detect predator around
+        // if(Physics.SphereCastAll(origin, hostCreature.getSightRange(), transform.forward, out hit, hostCreature.getSightRange())) {
+        //     if(hostCreature.CanEat(hit.collider.gameObject)) {
+        //         hostCreature.setPrey(hit.collider.gameObject);
+        //     }
+        // }
+
     }
 
 }

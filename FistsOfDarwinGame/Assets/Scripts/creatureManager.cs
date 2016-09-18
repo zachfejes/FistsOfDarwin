@@ -88,11 +88,11 @@ public class creatureManager : MonoBehaviour {
 				break;
 		}
 		System.Random randGen = new System.Random();
-		double randD = randGen.NextDouble();
 		Vector3 spawn = new Vector3((float)randGen.NextDouble()*300+100, (float)randGen.NextDouble()*60+20, (float)randGen.NextDouble() * 300 + 100);
 		newCreature.transform.position = spawn;
 		//newCreature.AddComponent<NavMeshAgent>();
 		newCreature.AddComponent<Creature>();
+		newCreature.GetComponent<Creature>().create(creatureGeneration.getCreatureTypeString(creatureType));
 		newCreature.AddComponent<PreyDetection>();
 		activeCreatureList.Add(newCreature);
 		//return newCreature;
