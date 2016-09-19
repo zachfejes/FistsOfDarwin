@@ -28,20 +28,22 @@ public class playerState : MonoBehaviour {
 			//swap out avatar
 			//	if (!worldState.gameIsActive())
 			//		;
-			foreach (Transform t in avatar.gameObject.GetComponentsInChildren<Transform>())
-				Destroy(t.gameObject);
+			Transform[] ta = avatar.gameObject.GetComponentsInChildren<Transform>();
+			foreach (Transform t in ta)
+				if (t.transform != avatar.transform)
+					Destroy(t.gameObject);
 			//somehow remove avatar
-			if (playerEra == timePeriod.timePeriodEnum.cambrianStage2) {
+			if (worldState.playerEra == timePeriod.timePeriodEnum.cambrianStage2) {
 				newavatar = Instantiate(creatures.amoebaPrefab);
 				newavatar.transform.position = loc;
 				newavatar.transform.parent = avatar.transform;
 			}
-			if (playerEra == timePeriod.timePeriodEnum.cambrianStage4) {
+			if (worldState.playerEra == timePeriod.timePeriodEnum.cambrianStage4) {
 				newavatar = Instantiate(creatures.wormPrefab);
 				newavatar.transform.position = loc;
 				newavatar.transform.parent = avatar.transform;
 			}
-			if (playerEra == timePeriod.timePeriodEnum.cambrianStage5) {
+			if (worldState.playerEra == timePeriod.timePeriodEnum.cambrianStage5) {
 				newavatar = Instantiate(creatures.trilobitePrefab);
 				newavatar.transform.position = loc;
 				newavatar.transform.parent = avatar.transform;
