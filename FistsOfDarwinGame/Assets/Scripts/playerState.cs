@@ -5,7 +5,7 @@ public class playerState : MonoBehaviour {
 
 	public timeScaleUpdate worldState;
 
-	public GameObject avatar;
+	public PlayerController avatar;
 
 	public creatureManager creatures;
 
@@ -20,27 +20,31 @@ public class playerState : MonoBehaviour {
 	{
 		if (worldState.playerEra != playerEra) {
 			Debug.Log("Level Up!");
-			Vector3 loc = avatar.transform.position;
-			PlayerController pc = avatar.GetComponent<PlayerController>();
+			Vector3 loc = avatar.gameObject.GetComponentInChildren<Transform>().position;
+			//PlayerController pc = avatar.GetComponent<PlayerController>();
+
+			GameObject newavatar;
 
 			//swap out avatar
-			if (!worldState.gameIsActive())
-				;
+			//	if (!worldState.gameIsActive())
+			//		;
+			foreach (Transform t in avatar.gameObject.GetComponentsInChildren<Transform>())
+				Destroy(t.gameObject);
 			//somehow remove avatar
 			if (playerEra == timePeriod.timePeriodEnum.cambrianStage2) {
-				avatar = Instantiate(creatures.amoebaPrefab);
-				avatar.transform.position = loc;
-				avatar.AddComponent<PlayerController>();
+				newavatar = Instantiate(creatures.amoebaPrefab);
+				newavatar.transform.position = loc;
+				newavatar.transform.parent = avatar.transform;
 			}
 			if (playerEra == timePeriod.timePeriodEnum.cambrianStage4) {
-				avatar = Instantiate(creatures.wormPrefab);
-				avatar.transform.position = loc;
-				avatar.AddComponent<PlayerController>();
+				newavatar = Instantiate(creatures.wormPrefab);
+				newavatar.transform.position = loc;
+				newavatar.transform.parent = avatar.transform;
 			}
 			if (playerEra == timePeriod.timePeriodEnum.cambrianStage5) {
-				avatar = Instantiate(creatures.trilobitePrefab);
-				avatar.transform.position = loc;
-				avatar.AddComponent<PlayerController>();
+				newavatar = Instantiate(creatures.trilobitePrefab);
+				newavatar.transform.position = loc;
+				newavatar.transform.parent = avatar.transform;
 			}
 		}
 		playerEra = worldState.playerEra;
