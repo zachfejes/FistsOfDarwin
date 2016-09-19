@@ -56,13 +56,13 @@ public class Creature: MonoBehaviour {
 
     public bool CanEat(GameObject potentialPrey) { return potentialPrey.GetComponent<Creature>() && potentialPrey.GetComponent<Creature>().getSize() < creatures[creatureType].size; }
 
-    OnCollisionEnter(Collision obj) {
+    void OnCollisionEnter(Collision obj) {
         if(CanEat(obj.gameObject)) {
             // Stop Movement
             gameObject.GetComponent<NavMeshAgent>().Stop();
-            obj.GetComponent<NavMeshAgent>().Stop();
+            obj.gameObject.GetComponent<NavMeshAgent>().Stop();
             // Destroy
-            Destroy(obj);
+            Destroy(obj.gameObject);
             // Resume Movement
             gameObject.GetComponent<NavMeshAgent>().Resume();
         }
