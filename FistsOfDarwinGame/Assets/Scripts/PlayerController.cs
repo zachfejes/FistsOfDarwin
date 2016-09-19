@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start()
 	{
-		avatar = gameObject.GetComponentInChildren<Rigidbody>();
+		avatar = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Rigidbody>();
 		player = avatar.transform;
 
 		if (horizontalOrientation) {

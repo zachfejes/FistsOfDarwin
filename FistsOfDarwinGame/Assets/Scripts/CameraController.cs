@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour {
 	private float heightDamping		= 2.0f;
 	private float rotationDamping	= 3.0f;
 
-	void Awake() {
+	void Start() {
 		avatar = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Rigidbody>();
 		player = avatar.transform;
 	}
